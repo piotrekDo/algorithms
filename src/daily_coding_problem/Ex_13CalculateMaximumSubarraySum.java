@@ -41,7 +41,7 @@ public class Ex_13CalculateMaximumSubarraySum {
 
     /**
      * Algorytm Kadane'a- algorytm sprawdza sume ciagu zaczynajac od 0 indexu i jsest przerywany
-     * w moencie zejscia ponizej zera, wtedy startowy index sie przesowa. A przechowywyany jest maxymalny wynik do tej pory
+     * w moencie zejscia ponizej zera, wtedy startowy index sie przesuwa, a przechowywyany jest maxymalny wynik do tej pory
      * algorytm nie zadziala jezeli tablica zawiera same ujemne wartosci
      */
     private static int kadanesAlgorithm(int[] tab) {
