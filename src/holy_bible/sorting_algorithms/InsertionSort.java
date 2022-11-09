@@ -5,14 +5,14 @@ import java.util.Arrays;
 import static java.lang.Math.round;
 
 /**
- * Sortowanie przez wstawianie jest efektywne dla nieiwlkiej liczby elementów. Działa w sposów, w jaki ludzie
- * często porządkują karty. Zaczynamy od "pustej" lewej ręki i zakrytej sterty kart na stole kolejno dobierając
- * następne i wstawiając je w odpowiednie miejsce w stosie w lewej ręce. Aby znaleźć właściwe miejsce dla karty
- * porównujemy ją z tymi które już mamy w ręce OD PRAWEJ. Przeskakujemy nad kolejnymi kartami dopóki nie natrafimy
- * na niższą.
- * Liczby, które chcemy sortować nazywamy KLUCZAMI
+ * <p>Sortowanie przez wstawianie jest efektywne dla nieiwlkiej liczby elementów. Działa w sposów, w jaki ludzie
+ *  * często porządkują karty. Zaczynamy od "pustej" lewej ręki i zakrytej sterty kart na stole kolejno dobierając
+ *  * następne i wstawiając je w odpowiednie miejsce w stosie w lewej ręce. Aby znaleźć właściwe miejsce dla karty
+ *  * porównujemy ją z tymi które już mamy w ręce OD PRAWEJ. Przeskakujemy nad kolejnymi kartami dopóki nie natrafimy
+ *  * na niższą.</p>
+ * <strong>Liczby, które chcemy sortować nazywamy KLUCZAMI</strong>
  *
- * Biblia, strona 17.
+ * <p><i>Biblia, strona 17.<i/><p/>
  */
  class InsertionSort implements Sorting{
 
@@ -32,11 +32,8 @@ import static java.lang.Math.round;
             }
             ints[prevIndex + 1] = key;
         }
-
         return ints;
     }
-
-
 
     static int[] insertionComment(int[] ints) {
         for (int i = 1; i < ints.length; i++) {                 //1. zaczynamy od drugiego elementu
