@@ -2,7 +2,7 @@ package holy_bible.sorting_algorithms;
 
 import java.util.Arrays;
 import java.util.Random;
-import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class SortingComparator {
@@ -13,10 +13,11 @@ public class SortingComparator {
 
         int[] randoms = getRandoms(100_000, 1_000);
 
-        Executor executor = Executors.newFixedThreadPool(2);
+        ExecutorService executor = Executors.newFixedThreadPool(2);
         executor.execute(()-> bubbleSort.printResult(Arrays.copyOf(randoms, randoms.length), true));
         executor.execute(()-> insertIonSort.printResult(Arrays.copyOf(randoms, randoms.length), true));
         executor.execute(()-> mergeSort.printResult(Arrays.copyOf(randoms, randoms.length), true));
+        executor.shutdown();
 
 
 //        bubbleSort.printResult(Arrays.copyOf(randoms, randoms.length), true);
