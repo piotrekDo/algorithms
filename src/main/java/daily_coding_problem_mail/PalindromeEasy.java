@@ -19,7 +19,7 @@ public class PalindromeEasy {
 class Palindrome {
 
     boolean checkPalindrome(String text) {
-        if (text == null || text.length() < 2){
+        if (text == null || text.length() < 2) {
             return false;
         }
         text = text.replaceAll("\\W", "").toLowerCase();
@@ -35,7 +35,7 @@ class Palindrome {
     }
 
     boolean checkRearrangedPalindrome(String text) {
-        if (text == null || text.length() < 2){
+        if (text == null || text.length() < 2) {
             return false;
         }
         text = text.replaceAll("\\W", "").toLowerCase();
